@@ -1,0 +1,13 @@
+[ScriptFiles]
+Script1 = C:\Program Files\Autodesk\MotionBuilder 2015\bin\config\Scripts\cubeWall.py 
+Script2 = C:\Program Files\Autodesk\MotionBuilder 2015\bin\config\Scripts\cubeWall.py 
+Script3 =  
+Script4 =  
+Script5 =  
+Script6 =  
+Script7 =  
+Script8 =  
+Script9 =  
+Script10 =  
+Script11 =  
+Script12 =  

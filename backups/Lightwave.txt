@@ -1,0 +1,248 @@
+[Config]
+Name = Lightwave
+
+[Actions]
+action.global.undo			= {CTRL:Z*DN}|{NONE:U*DN}
+action.global.redo			= {CTRL:Y*DN}|{CTRL:U*DN}
+action.global.cut			= {CTRL:X*DN}
+action.global.copy			= {CTRL:C*DN}|{CMD:C*DN}
+action.global.paste			= {CTRL:V*DN}|{CMD:V*DN}
+action.global.paste_special		= {CTRL:B*DN}
+action.global.delete 			= {NONE:DEL*DN}
+action.global.deselect			= {SHFT:D*DN}
+action.global.accept			= {NONE:ENTR*DN}
+action.global.cancel			= {NONE:ESC*DN}
+action.global.new 			= {CTRL:N*DN}
+action.global.open 			= {CTRL:O*DN}
+action.global.save 			= {CTRL:S*DN}
+action.global.show			= {NONE:\*DN}
+action.global.hide			= {NONE:-*DN}
+
+action.global.play_backwards		= {CTRL:DOWN*DN}
+action.global.play_forwards		= {CTRL:UP*DN}|{NONE:/*UP}
+action.global.one_frame_forwards	= {CTRL:RGHT*DN}
+action.global.one_frame_backwards	= {CTRL:LEFT*DN}
+action.global.go_to_start		= {NONE:HOME*DN}
+action.global.go_to_end			= {NONE:END*DN}
+action.tool.transport.frame_all_take 	= {CTSH:A*DN}
+action.tool.transport.frame_take 	= {CTSH:F*DN}
+
+action.viewer.hierarchy.go_up		= {NONE:PGUP*DN}
+action.viewer.hierarchy.go_down		= {NONE:PGDN*DN}
+action.viewer.hierarchy.go_left		= 
+action.viewer.hierarchy.go_right	= 
+
+action.global.frame				= {SHFT:A*DN}
+action.global.frame_all			= {CTRL:A*DN}
+action.global.add_key			= {NONE:K*DN}
+action.global.add_zero_key		= {SHFT:K*DN}
+action.global.add_zero_non_flat_key	=
+action.global.add_flat_key		= {CTRL:K*DN}
+action.global.add_key_at_time_x		= {CTSH:K*DN}
+action.global.add_ikkey			= 
+action.global.add_fkkey			= 
+action.global.go_to_next_key		= {SHFT:RGHT*DN}
+action.global.go_to_previous_key	= {SHFT:LEFT*DN}
+
+action.global.copy_previous_tr 		= 
+action.global.copy_previous_t 		= 
+action.global.copy_previous_r 		= 
+action.global.copy_next_tr 		= 
+action.global.copy_next_t 		= 
+action.global.copy_next_r 		= 
+action.global.copy_previous_last_used	=
+action.global.copy_next_last_used	=
+
+action.global.find_model_by_name	= {SHFT:N*DN}
+
+action.global.set_layout_editing	= {CTSH:1*DN}
+action.global.set_layout_scripting	= {CTSH:2*DN}
+action.global.set_layout_preview	= {CTSH:3*DN}
+action.global.set_layout_user_1		= {CTSH:4*DN}
+action.global.set_layout_user_2		= {CTSH:5*DN}
+action.global.set_layout_user_3		= {CTSH:6*DN}
+action.global.set_layout_user_4		= {CTSH:7*DN}
+action.global.set_layout_user_5		= {CTSH:8*DN}
+action.global.set_layout_user_6		= {CTSH:9*DN}
+action.global.set_layout_user_7		= {CTSH:0*DN}
+
+action.global.move_focus_forward	= {NONE:TAB*DN}
+action.global.move_focus_backward	= {SHFT:TAB*DN}
+
+action.global.help			= {NONE:F1*DN}
+
+action.tool.character.activate_soft_release	= {NONE:Q*DN}
+action.tool.character.deactivate_soft_release	= {NONE:Q*UP}
+action.tool.character.pin_rotation 		= {NONE:E*DN}
+action.tool.character.pin_translation 		= {NONE:W*UP}
+action.tool.character.toggle_use_ik_pivot	= {NONE:D*DN}
+
+action.tool.character.full_body		= 
+action.tool.character.body_parts	= 
+action.tool.character.selection		= 
+action.tool.character.cycle   		= 
+
+action.tool.character.full_body_key	=
+action.tool.character.body_parts_key	=
+action.tool.character.selection_key	=
+
+action.tool.character.toggle_rig_visual_feedback	  	=
+action.tool.character.toggle_rig_visual_feedback_key	  	=
+action.tool.character.toggle_rig_visual_feedback_bodypartset 	=
+action.tool.character.toggle_rig_visual_feedback_reach	  	=
+
+action.viewer.pick_mode_object		= {NONE:O*DN}
+action.viewer.pick_mode_pivot		= {SHFT:O*DN}
+action.viewer.pick_mode_vertex		= {NONE:V*DN}
+
+action.viewer.cycle_picking_mode	= {NONE:A*UP}
+
+action.viewer.camera.front_back		= {NONE:1*DN}
+action.viewer.camera.top_bottom		= {NONE:2*DN}
+action.viewer.camera.right_left		= {NONE:3*DN}
+action.viewer.camera.perspective	= {NONE:4*DN}
+action.viewer.camera.switcher		= {CTRL:I*DN}
+action.viewer.toggle.schematic_view	= {NONE:7*DN}
+action.viewer.camera.redo_view_change = 
+action.viewer.camera.undo_view_change = 
+action.viewer.camera.reset_view		= 
+
+action.viewer.camera.stereo.center			=
+action.viewer.camera.stereo.left			=
+action.viewer.camera.stereo.right			=
+action.viewer.camera.stereo.active			=
+action.viewer.camera.stereo.horizontal_interlace	=
+action.viewer.camera.stereo.checkerboard		=
+action.viewer.camera.stereo.anaglyph			=
+action.viewer.camera.stereo.anaglyph_luminance		=
+action.viewer.camera.stereo.freeview_parallel		=
+action.viewer.camera.stereo.freeview_crossed		=
+
+action.viewer.toggle.full_screen	= {ALT:ENTR*DN}
+action.viewer.toggle.stats		= {SHFT:F*DN}
+action.viewer.toggle.memory		= {SHFT:M*DN}
+action.viewer.toggle.gpuskindeform	= {CTSH:T*DN}
+action.viewer.toggle.dualquaternionskinning	= {CTSH:Q*DN}
+action.viewer.toggle.earlyfrustumculling	= {CTSH:P*DN}
+action.viewer.toggle.multithreadevaluation	= {CTSH:J*DN}
+action.viewer.toggle.idbufferpicking	= 
+action.viewer.toggle.selectionoverride	=
+
+action.viewer.regions.1			= {CTRL:1*DN}
+action.viewer.regions.2			= {CTRL:2*DN}
+action.viewer.regions.3			= {CTRL:3*DN}
+action.viewer.regions.4			= {CTRL:4*DN}
+
+action.viewer.mode.parent 		= {NONE:P*DN}
+action.viewer.mode.translate 		= {NONE:T*UP}
+action.viewer.mode.rotate 		= {NONE:Y*UP}
+action.viewer.mode.rotatearound 	= {SHFT:Y*UP}
+action.viewer.mode.scale 		= {NONE:H*UP}
+action.viewer.mode.scalevolumic		= {SHFT:H*UP}
+
+action.viewer.manipulator.local		= {NONE:F5*UP}
+action.viewer.manipulator.global	= {NONE:F6*UP}
+action.viewer.manipulator.additive	= {NONE:F7*UP}
+
+action.viewer.manipulator.increase_handle_size = {NONE:NADD*DN}
+action.viewer.manipulator.decrease_handle_size = {NONE:NSUB*DN}
+
+action.viewer.temp_shift_pivot      = {ALSH:W*DN}
+
+action.viewer.manipulator.toggle_mode	= {NONE:F3*UP}
+
+action.viewer.toggle.sub_mode		= {NONE:F4*UP} 
+
+action.viewer.shade.wire 		= {SHFT:W*UP}
+action.viewer.shade.flat 		=
+action.viewer.shade.lighted 		= {SHFT:E*UP}
+action.viewer.shade.textured 		= {SHFT:R*UP}
+action.viewer.shade.shaders 		=
+action.viewer.shade.textures_shaders	= {SHFT:T*UP}
+
+action.viewer.ruler.create_new_ruler    = {CTSH:R*DN}
+action.viewer.ruler.save_as_dimension   = {CTSH:D*DN}
+
+action.Pose.copy_characteranimpose	= {CTRL:F12*DN}
+action.Pose.paste_characteranimpose	= {ALT:F12*DN}
+
+action.story.one_clip_forward		= {CTSH:RGHT*DN}
+action.story.one_clip_backward		= {CTSH:LEFT*DN}
+action.story.goto_first_clip		= {CTSH:HOME*DN}
+action.story.goto_last_clip		= {CTSH:END*DN}
+action.story.razor			= {ALT:R*DN}
+action.story.scale_toggle		= {ALT:S*DN}
+
+action.fcurve.insert_key		= {ALT:I*DN}
+
+action.global.script1			= {SHFT:F1*DN}
+action.global.script2			= {SHFT:F2*DN}
+action.global.script3			= {SHFT:F3*DN}
+action.global.script4			= {SHFT:F4*DN}
+action.global.script5			= {SHFT:F5*DN}
+action.global.script6			= 
+action.global.script7			= 
+action.global.script8			= 
+action.global.script9			= 
+action.global.script10			= 
+action.global.script11			= 
+action.global.script12			= 
+
+[Interactions]
+inter.global.pick.goto			= {CTSH:NONE}+LMB*UP
+inter.fcurve.add_move_key		= {NONE:A}+LMB*DRG
+
+inter.viewer.drag_and_drop		= {ALT:NONE}+LMB*DRG
+inter.global.jog			= {NONE:J}+LMB*DRG
+
+inter.nle.scale_track			= {NONE:H}+LMB*DRG
+inter.nle.Translate_track		= 
+
+inter.viewer.pick.alphathreshold	=
+inter.viewer.pick.dolly_hide_front 	= {SHFT:1}+NONE*WL
+inter.viewer.pick.dolly_isolate 	= {SHFT:2}+NONE*WL
+inter.viewer.camera.dolly		= {CTRL:NONE}+LMB*DRG
+inter.viewer.camera.truck		= {SHFT:NONE}+LMB*DRG
+inter.viewer.camera.roll		= {NONE:R}+LMB*DRG
+inter.viewer.camera.rollangle		= {NONE:R}+RMB*DRG
+inter.viewer.camera.zoom		= {NONE:Z}+LMB*DRG
+inter.viewer.camera.zoomout		= {NONE:Z}+RMB*DRG 
+inter.viewer.camera.follow		= {CTRL:NONE}+RMB*DRG
+inter.viewer.camera.slide		= {SHFT:NONE}+RMB*DRG
+inter.viewer.camera.orbit		= {CTSH:NONE}+LMB*DRG
+inter.viewer.camera.pan			= {CTSH:NONE}+RMB*DRG
+
+inter.viewer.pick.hard			= {NONE:NONE}+LMB*DBL
+inter.viewer.pick.exlusive		= {NONE:NONE}+LMB*UP
+inter.viewer.pick.rect.exclusive	= {NONE:NONE}+LMB*DRG
+inter.viewer.pick.add			= {NONE:NONE}+MMB*UP
+inter.viewer.pick.rect.add		= {NONE:NONE}+MMB*DRG 
+inter.viewer.pick.remove		= 
+inter.viewer.pick.rect.remove		= {NONE:NONE}+RMB*DRG
+inter.viewer.pick.toggle		= {CTRL:NONE}+LMB*UP|{NONE:SPC}+LMB*UP
+inter.viewer.pick.rect.toggle		= {NONE:SPC}+LMB*DRG
+inter.viewer.pick.rect			=
+inter.viewer.pick.scale			= {CTRL:NONE}+MMB*DRG
+
+inter.viewer.pick_and_drag		= {NONE:T}+LMB*DRG
+inter.global.copy_and_drag		= {NONE:C}+LMB*DRG
+
+inter.viewer.pick.range			= {SHFT:NONE}+LMB*UP
+inter.viewer.pick.range.add		= {SHFT:NONE}+MMB*UP
+
+inter.viewer.pick.group			= {NONE:G}+LMB*UP
+inter.viewer.pick.add_group		= {NONE:G}+MMB*UP
+inter.viewer.pick.hierarchy		= {NONE:SPC}+RMB*UP
+inter.viewer.pick.hierarchy_up		= {CTSH:NONE}+RMB*UP
+inter.viewer.pick.root			= {CTRL:NONE}+RMB*UP
+inter.viewer.pick.up			= {SHFT:NONE}+RMB*UP
+
+inter.story.ripple			= {NONE:/}+LMB*DRG
+
+inter.viewer.manipulator.snap		= {NONE:M}+LMB*DRG
+inter.viewer.manipulator.use		= {NONE:F6}+LMB*DRG
+inter.viewer.manipulator.xyz		= {NONE:F7}+LMB*DRG|{NONE:F7}+MMB*DRG|{NONE:F7}+RMB*DRG
+
+[Modifiers]
+modifier.viewer.manipulator.display_snap_points = {NONE:B}
+modifier.viewer.hud.display_bloop_slate         = {SHFT:B}
