@@ -40,13 +40,8 @@ import webbrowser
 from pyfbsdk import FBSystem
 
 DEFAULTCONFIGSPATH = FBSystem().ConfigPath + 'Keyboard'
-# PythonStartupPath is usually in users' Documents\MB\...\config folder. We want that config folder.
-# If someone moved their user's Documents folder in Windows to another drive,
-#   os.path.expanduser('~/Documents') might not get the correct folder.
-# If you've changed your PythonStartupPath in the preferences, you have to set the config path manually here:
-user_config_path = "/".join(FBSystem().GetPythonStartupPath()[0].split("\\")[:-1])
-KEYBOARDCONFIGPATH = user_config_path + '/Keyboard'
-ACTIONSCRIPTPATH = user_config_path + '/Scripts'
+KEYBOARDCONFIGPATH = FBSystem().UserConfigPath + '/Keyboard'
+ACTIONSCRIPTPATH = FBSystem().UserConfigPath + '/Scripts'
     
 MAX = '3ds Max.txt'
 LIGHTWAVE = 'Lightwave.txt'
