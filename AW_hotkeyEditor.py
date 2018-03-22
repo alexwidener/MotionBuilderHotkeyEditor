@@ -1,3 +1,17 @@
+#   Copyright 2015 Alex Widener
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+  
 """
 What this is:
 A Hotkey Editor for Autodesk MotionBuilder.
@@ -8,7 +22,9 @@ http://alexwidener.github.io/MotionBuilderHotkeyEditor/
 Thanks:
 Yi Liang Siew for sorting out my stupidity. http://www.sonictk.com/
 
-Apache 2.0 License.
+modified 2018 Olaf Haag:
+    - added Apache License 2.0 boilerplate notice
+    - changed code to find config folders
 """
 __author__ = "Alex Widener"
 __copyright__ = "Alex Widener"
@@ -21,11 +37,17 @@ import time
 from shutil import copy
 from PySide import QtGui, QtCore
 import webbrowser
+from pyfbsdk import FBSystem
 
-USERDOCS = os.path.expanduser('~/Documents')
-# Edit these two paths for your versions.
-DEFAULTCONFIGSPATH = 'C:/Program Files/Autodesk/MotionBuilder 2015/bin/config/Keyboard'
-USERCONFIGSPATH = os.path.join(USERDOCS, 'MB', '2015-x64', 'config', 'Keyboard')
+DEFAULTCONFIGSPATH = FBSystem().ConfigPath + 'Keyboard'
+# PythonStartupPath is usually in users' Documents\MB\...\config folder. We want that config folder.
+# If someone moved their user's Documents folder in Windows to another drive,
+#   os.path.expanduser('~/Documents') might not get the correct folder.
+# If you've changed your PythonStartupPath in the preferences, you have to set the config path manually here:
+user_config_path = "/".join(FBSystem().GetPythonStartupPath()[0].split("\\")[:-1])
+KEYBOARDCONFIGPATH = user_config_path + '/Keyboard'
+ACTIONSCRIPTPATH = user_config_path + '/Scripts'
+    
 MAX = '3ds Max.txt'
 LIGHTWAVE = 'Lightwave.txt'
 MAYA = 'Maya.txt'
@@ -50,8 +72,8 @@ class UI_HotkeyEditor(QtGui.QWidget):
         self.resize(1280, 720)
 
         self.mbDefaultFile = os.path.join(DEFAULTCONFIGSPATH, 'MotionBuilder.txt')
-        self.customKeysFile = os.path.join(USERCONFIGSPATH, CUSTOMHOTKEYS)
-        self.actionScriptFile = os.path.join(USERCONFIGSPATH, 'ActionScript.txt')
+        self.customKeysFile = os.path.join(KEYBOARDCONFIGPATH, CUSTOMHOTKEYS)
+        self.actionScriptFile = os.path.join(ACTIONSCRIPTPATH, 'ActionScript.txt')
 
         self.customSettings = []
 
@@ -219,7 +241,7 @@ class UI_HotkeyEditor(QtGui.QWidget):
         But this allows the user to start their current settings from whatever system they want to start from.
         """
         copyFile = os.path.join(DEFAULTCONFIGSPATH, replacement)
-        newFile = os.path.join(USERCONFIGSPATH, CUSTOMHOTKEYS)
+        newFile = os.path.join(KEYBOARDCONFIGPATH, CUSTOMHOTKEYS)
         copy(copyFile, newFile)
 
         self.settingsList.clearContents()
